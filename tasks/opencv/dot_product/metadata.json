@@ -1,0 +1,16 @@
+{
+        "name": "dot_product",
+        "task_id": 6,
+        "repo": "opencv",
+        "module": "core",
+        "source_arch": "arm",
+        "target_arch": "riscv",
+        "source_code_path": "opencv/hal/carotene/src/dot_product.cpp",
+        "operator_description": "Calculate the dot product (scalar product) of two input arrays, multiplying corresponding elements and summing",
+        "correctness_test_commands": [
+            "./opencv_test_core --gtest_filter=Core_DotProduct.*"
+        ],
+        "performance_test_commands": [
+            "./opencv_perf_core --gtest_filter=MatType_Length_dot.*"
+        ]
+    }

@@ -1,0 +1,20 @@
+{
+        "name": "min_max",
+        "task_id": 7,
+        "repo": "opencv",
+        "module": "core",
+        "source_arch": "arm",
+        "target_arch": "riscv",
+        "source_code_path": "opencv/hal/carotene/src/min_max.cpp",
+        "operator_description": "Calculate element-wise minimum or maximum of two input arrays or array and scalar, supporting multiple data types",
+        "correctness_test_commands": [
+            "./opencv_test_core --gtest_filter=Core_Max/ElemWiseTest.*",
+            "./opencv_test_core --gtest_filter=Core_MaxS/ElemWiseTest.*",
+            "./opencv_test_core --gtest_filter=Core_Min/ElemWiseTest.*",
+            "./opencv_test_core --gtest_filter=Core_MinS/ElemWiseTest.*"
+        ],
+        "performance_test_commands": [
+            "./opencv_perf_core --gtest_filter=BinaryOpTest.max*",
+            "./opencv_perf_core --gtest_filter=BinaryOpTest.min*"
+        ]
+    }

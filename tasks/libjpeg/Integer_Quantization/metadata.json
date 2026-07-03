@@ -1,0 +1,20 @@
+{
+    "name": "Integer_Quantization",
+    "task_id": 70,
+    "repo": "libjpeg",
+    "source_arch": "arm",
+    "target_arch": "riscv",
+    "main_source_code_path": [
+        "libjpeg/simd/arm/jquanti-neon.c"
+    ],
+    "target_file": "simd/rvv/1.c",
+    "operator_description": "This module contains two operations for JPEG compression: (1) Sample Conversion (convsamp): Loads sample data into workspace, applying unsigned->signed conversion. Converts sample data from unsigned (0..255) to signed (-128..127) format by subtracting CENTERJSAMPLE (128), which is required for DCT processing. This is the first step in the forward DCT pipeline, preparing pixel data for frequency domain transformation. (2) Integer Quantization (quantize): Quantizes DCT coefficients by multiplying with quantization table reciprocals and right-shifting to avoid division.",
+    "correctness_test_commands": [
+        "./test/gtest/test_quantize",
+        "./test/gtest/test_convsamp"
+    ],
+    "performance_test_commands": [
+        "./test/gtest/perf_quantize",
+        "./test/gtest/perf_convsamp"
+    ]
+}

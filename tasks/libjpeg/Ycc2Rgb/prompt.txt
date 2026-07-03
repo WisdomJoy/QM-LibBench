@@ -1,0 +1,5 @@
+Migrate the Ycc2Rgb operator located in the directory:                              
+libjpeg/simd/arm.
+to the directory:
+libjpeg/simd/rvv, performing the migration of vector instructions from ARM to RISC-V.
+you need to identify and update the dispatch logic. Ensure the new RVV functions are registered so the library can call them at runtime.

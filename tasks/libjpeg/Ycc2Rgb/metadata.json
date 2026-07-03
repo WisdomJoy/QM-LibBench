@@ -1,0 +1,19 @@
+{
+    "name": "Ycc2Rgb",
+    "task_id": 67,
+    "repo": "libjpeg",
+    "source_arch": "arm",
+    "target_arch": "riscv",
+    "main_source_code_path": [
+        "libjpeg/simd/arm/jdcolext-neon.c",
+        "libjpeg/simd/arm/jdcolor-neon.c"
+    ],
+    "target_file": "simd/rvv/1.c",
+    "operator_description": "Converts YCbCr pixel data to RGB color space using fixed-point arithmetic with precomputed lookup tables for JPEG decompression. Implements CCIR 601-1 standard conversion formulas: R = Y + 1.40200 * Cr, G = Y - 0.34414 * Cb - 0.71414 * Cr, B = Y + 1.77200 * Cb. Converts from noninterleaved (one-plane-per-component) format to interleaved pixel format with range-limiting to handle DCT losses.",
+    "correctness_test_commands": [
+        "./test/gtest/test_ycc_rgb_convert"
+    ],
+    "performance_test_commands": [
+        "./test/gtest/perf_ycc_rgb_convert"
+    ]
+}

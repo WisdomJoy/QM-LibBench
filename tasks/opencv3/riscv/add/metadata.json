@@ -1,0 +1,20 @@
+ {
+        "name": "add",
+        "task_id": 1,
+        "repo": "opencv",
+        "module": "core",
+        "source_arch": "arm",
+        "target_arch": "riscv",
+        "target_file": "hal/riscv-rvv/src/core/1.cpp",
+        "source_code_path": "opencv/hal/carotene/src/add.cpp",
+        "operator_description": "Perform element-wise addition of two arrays, supporting saturation or wrap-around overflow handling strategies",
+        "correctness_test_commands": [
+            "./opencv_test_core --gtest_filter=Core_Add/ElemWiseTest.*",
+            "./opencv_test_core --gtest_filter=Core_AddS/ElemWiseTest.*",
+            "./opencv_test_core --gtest_filter=Core_Add.*"
+        ],
+        "performance_test_commands": [
+            "./opencv_perf_core --gtest_filter=BinaryOpTest.add*",
+            "./opencv_perf_core --gtest_filter=ArithmMixedTest.add*"
+        ]
+    }

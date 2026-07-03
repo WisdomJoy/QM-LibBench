@@ -1,0 +1,16 @@
+{
+        "name": "lstm",
+        "task_id": 31,
+        "repo": "ncnn",
+        "source_arch": "x86",
+        "target_arch": "arm",
+        "main_source_code_path": "ncnn/src/layer/x86/lstm_x86.cpp",
+        "target_file": "src/layer/arm/1.cpp",
+        "operator_description": "Computes a long short-term memory recurrent layer.",
+        "correctness_test_commands": [
+            "./test_lstm"
+        ],
+        "performance_test_commands": [
+            "./perf_lstm"
+        ]
+}

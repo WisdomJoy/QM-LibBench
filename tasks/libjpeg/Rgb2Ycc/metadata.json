@@ -1,0 +1,19 @@
+{
+    "name": "Rgb2Ycc",
+    "task_id": 65,
+    "repo": "libjpeg",
+    "source_arch": "arm64",
+    "target_arch": "riscv",
+    "main_source_code_path": [
+        "libjpeg/simd/arm/aarch64/jccolext-neon.c",
+        "libjpeg/simd/arm/jccolor-neon.c"
+    ],
+    "target_file": "simd/rvv/1.c",
+    "operator_description": "Converts RGB pixel data to YCbCr color space using fixed-point arithmetic for JPEG compression.",
+    "correctness_test_commands": [
+        "./test/gtest/test_rgb_ycc_convert"
+    ],
+    "performance_test_commands": [
+        "./test/gtest/perf_rgb_ycc_convert"
+    ]
+}

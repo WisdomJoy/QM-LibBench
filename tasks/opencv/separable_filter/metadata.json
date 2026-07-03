@@ -1,0 +1,16 @@
+{
+        "name": "separable_filter",
+        "task_id": 19,
+        "repo": "opencv",
+        "module": "imgproc",
+        "source_arch": "arm",
+        "target_arch": "riscv",
+        "source_code_path": "opencv/hal/carotene/src/separable_filter.cpp",
+        "operator_description": "Apply a 3x3 separable filter to images, decomposing 2D convolution into 1D horizontal and vertical convolutions to improve computational efficiency",
+        "correctness_test_commands": [
+            "./opencv_test_imgproc --gtest_filter=Imgproc_sepFilter2D.*",
+            "./opencv_test_imgproc --gtest_filter=Imgproc_sepFilter2D_outTypes.*",
+            "./opencv_test_imgproc --gtest_filter=Imgproc_sepFilter2D_types.*"
+        ],
+        "performance_test_commands": []
+    }

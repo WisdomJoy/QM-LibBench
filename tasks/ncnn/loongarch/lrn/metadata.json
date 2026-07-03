@@ -1,0 +1,16 @@
+{
+        "name": "lrn",
+        "task_id": 48,
+        "repo": "ncnn",
+        "source_arch": "arm",
+        "target_arch": "loongarch",
+        "main_source_code_path": "ncnn/src/layer/arm/lrn_arm.cpp",
+        "target_file": "src/layer/loongarch/1.cpp",
+        "operator_description": "Applies local response normalization across nearby channels.",
+        "correctness_test_commands": [
+            "./test_lrn"
+        ],
+        "performance_test_commands": [
+            "./perf_lrn"
+        ]
+}

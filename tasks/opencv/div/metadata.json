@@ -1,0 +1,19 @@
+{
+        "name": "div",
+        "task_id": 5,
+        "repo": "opencv",
+        "module": "core",
+        "source_arch": "arm",
+        "target_arch": "riscv",
+        "source_code_path": "opencv/hal/carotene/src/div.cpp",
+        "operator_description": "Perform element-wise division of two arrays, supporting scaling factor and saturation/wrap-around overflow handling strategies, also supporting calculation of reciprocal of array elements",
+        "correctness_test_commands": [
+            "./opencv_test_core --gtest_filter=Core_Div/ElemWiseTest.*",
+            "./opencv_test_core --gtest_filter=Core_DivideRules.*",
+            "./opencv_test_core --gtest_filter=Core_Recip/ElemWiseTest.*"
+        ],
+        "performance_test_commands": [
+            "./opencv_perf_core --gtest_filter=BinaryOpTest.div*",
+            "./opencv_perf_core --gtest_filter=BinaryOpTest.recip*"
+        ]
+    }

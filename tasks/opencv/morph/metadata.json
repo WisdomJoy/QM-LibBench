@@ -1,0 +1,21 @@
+{
+        "name": "morph",
+        "task_id": 16,
+        "repo": "opencv",
+        "module": "imgproc",
+        "source_arch": "arm",
+        "target_arch": "riscv",
+        "source_code_path": "opencv/hal/carotene/src/morph.cpp",
+        "operator_description": "Perform morphological operations with 3x3 or custom kernels, including erosion (shrinking bright regions) and dilation (expanding bright regions), used for processing binary or grayscale images",
+        "correctness_test_commands": [
+            "./opencv_test_imgproc --gtest_filter=Imgproc_Morphology.*",
+            "./opencv_test_imgproc --gtest_filter=Imgproc_MorphEx.*",
+            "./opencv_test_imgproc --gtest_filter=Imgproc_Erode.*",
+            "./opencv_test_imgproc --gtest_filter=Imgproc_Dilate.*",
+            "./opencv_test_imgproc --gtest_filter=Imgproc_MorphologyEx.*"
+        ],
+        "performance_test_commands": [
+            "./opencv_perf_imgproc --gtest_filter=Size_MatType_erode.*",
+            "./opencv_perf_imgproc --gtest_filter=Size_MatType_dilate.*"
+        ]
+    }

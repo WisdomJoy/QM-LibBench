@@ -1,0 +1,17 @@
+{
+        "name": "gaussian_blur",
+        "task_id": 14,
+        "repo": "opencv",
+        "module": "imgproc",
+        "source_arch": "arm",
+        "target_arch": "riscv",
+        "source_code_path": "opencv/hal/carotene/src/gaussian_blur.cpp",
+        "operator_description": "Apply 3x3 Gaussian filter to images for smoothing, using Gaussian weighted kernel to reduce image noise and details",
+        "correctness_test_commands": [
+            "./opencv_test_imgproc --gtest_filter=Imgproc_GaussianBlur.*",
+            "./opencv_test_imgproc --gtest_filter=GaussianBlur_Bitexact.*"
+        ],
+        "performance_test_commands": [
+            "./opencv_perf_imgproc --gtest_filter=Size_MatType_BorderType_gaussianBlur5x5.*"
+        ]
+    }

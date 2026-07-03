@@ -1,0 +1,16 @@
+{
+        "name": "sdpa",
+        "task_id": 36,
+        "repo": "ncnn",
+        "source_arch": "x86",
+        "target_arch": "arm",
+        "main_source_code_path": "ncnn/src/layer/x86/sdpa_x86.cpp",
+        "target_file": "src/layer/arm/1.cpp",
+        "operator_description": "Computes scaled dot-product attention for query, key, and value tensors.",
+        "correctness_test_commands": [
+            "./test_sdpa"
+        ],
+        "performance_test_commands": [
+            "./perf_sdpa"
+        ]
+}

@@ -1,0 +1,16 @@
+{
+        "name": "deformableconv2d",
+        "task_id": 25,
+        "repo": "ncnn",
+        "source_arch": "x86",
+        "target_arch": "arm",
+        "main_source_code_path": "ncnn/src/layer/x86/deformableconv2d_x86.cpp",
+        "target_file": "src/layer/arm/1.cpp",
+        "operator_description": "Applies 2D deformable convolution with learned sampling offsets.",
+        "correctness_test_commands": [
+            "./test_deformableconv2d"
+        ],
+        "performance_test_commands": [
+            "./perf_deformableconv2d"
+        ]
+}

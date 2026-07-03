@@ -1,0 +1,19 @@
+{
+        "name": "sub",
+        "task_id": 9,
+        "repo": "opencv",
+        "module": "core",
+        "source_arch": "arm",
+        "target_arch": "riscv",
+        "source_code_path": "opencv/hal/carotene/src/sub.cpp",
+        "operator_description": "Perform element-wise subtraction of two arrays, supporting saturation or wrap-around underflow handling strategies",
+        "correctness_test_commands": [
+            "./opencv_test_core --gtest_filter=Subtract.*",
+            "./opencv_test_core --gtest_filter=Core_Sub/ElemWiseTest.*"
+        ],
+        "performance_test_commands": [
+            "./opencv_perf_core --gtest_filter=BinaryOpTest.sub*",
+            "./opencv_perf_core --gtest_filter=ArithmMixedTest.sub*",
+            "./opencv_perf_core --gtest_filter=Arithm/SubtractOutputMatNotEmpty.*"
+        ]
+    }

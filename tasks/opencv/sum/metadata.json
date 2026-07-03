@@ -1,0 +1,16 @@
+{
+        "name": "sum",
+        "task_id": 11,
+        "repo": "opencv",
+        "module": "core",
+        "source_arch": "arm",
+        "target_arch": "riscv",
+        "source_code_path": "opencv/hal/carotene/src/sum.cpp",
+        "operator_description": "Calculate the sum or squared sum of all elements in the input array, supporting multi-channel data",
+        "correctness_test_commands": [
+            "./opencv_test_core --gtest_filter=Core_Sum/ElemWiseTest.*"
+        ],
+        "performance_test_commands": [
+            "./opencv_perf_core --gtest_filter=Size_MatType_sum.*"
+        ]
+    }

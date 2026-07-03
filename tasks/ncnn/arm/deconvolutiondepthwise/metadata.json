@@ -1,0 +1,16 @@
+{
+        "name": "deconvolutiondepthwise",
+        "task_id": 24,
+        "repo": "ncnn",
+        "source_arch": "x86",
+        "target_arch": "arm",
+        "main_source_code_path": "ncnn/src/layer/x86/deconvolutiondepthwise_x86.cpp",
+        "target_file": "src/layer/arm/1.cpp",
+        "operator_description": "Applies depthwise transposed convolution for spatial upsampling.",
+        "correctness_test_commands": [
+            "./test_deconvolutiondepthwise"
+        ],
+        "performance_test_commands": [
+            "./perf_deconvolutiondepthwise"
+        ]
+}

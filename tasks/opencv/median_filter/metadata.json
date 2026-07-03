@@ -1,0 +1,16 @@
+{
+        "name": "median_filter",
+        "task_id": 15,
+        "repo": "opencv",
+        "module": "imgproc",
+        "source_arch": "arm",
+        "target_arch": "riscv",
+        "source_code_path": "opencv/hal/carotene/src/median_filter.cpp",
+        "operator_description": "Apply a 3x3 median filter to the image, replacing each pixel value with the median of its neighborhood, effectively reducing image noise",
+        "correctness_test_commands": [
+            "./opencv_test_imgproc --gtest_filter=Imgproc_MedianBlur.*"
+        ],
+        "performance_test_commands": [
+            "./opencv_perf_imgproc --gtest_filter=Size_MatType_kSize_medianBlur.*"
+        ]
+    }

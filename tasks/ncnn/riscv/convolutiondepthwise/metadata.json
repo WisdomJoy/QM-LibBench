@@ -1,0 +1,16 @@
+{
+        "name": "convolutiondepthwise",
+        "task_id": 58,
+        "repo": "ncnn",
+        "source_arch": "arm",
+        "target_arch": "riscv",
+        "main_source_code_path": "ncnn/src/layer/arm/convolutiondepthwise_arm.cpp",
+        "target_file": "src/layer/riscv/1.cpp",
+        "operator_description": "Applies depthwise convolution independently to each input channel.",
+        "correctness_test_commands": [
+            "./test_convolutiondepthwise"
+        ],
+        "performance_test_commands": [
+            "./perf_convolutiondepthwise"
+        ]
+}

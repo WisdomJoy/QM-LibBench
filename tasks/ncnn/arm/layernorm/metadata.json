@@ -1,0 +1,16 @@
+{
+        "name": "layernorm",
+        "task_id": 29,
+        "repo": "ncnn",
+        "source_arch": "x86",
+        "target_arch": "arm",
+        "main_source_code_path": "ncnn/src/layer/x86/layernorm_x86.cpp",
+        "target_file": "src/layer/arm/1.cpp",
+        "operator_description": "Normalizes activations across features within each input sample.",
+        "correctness_test_commands": [
+            "./test_layernorm"
+        ],
+        "performance_test_commands": [
+            "./perf_layernorm"
+        ]
+}

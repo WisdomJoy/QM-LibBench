@@ -1,0 +1,16 @@
+{
+        "name": "batchnorm",
+        "task_id": 21,
+        "repo": "ncnn",
+        "source_arch": "x86",
+        "target_arch": "arm",
+        "main_source_code_path": "ncnn/src/layer/x86/batchnorm_x86.cpp",
+        "target_file": "src/layer/arm/1.cpp",
+        "operator_description": "Normalizes each channel using learned scale and bias parameters.",
+        "correctness_test_commands": [
+            "./test_batchnorm"
+        ],
+        "performance_test_commands": [
+            "./perf_batchnorm"
+        ]
+}

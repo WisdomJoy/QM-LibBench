@@ -1,0 +1,5 @@
+Migrate the gelu operator located in the directory:
+ncnn/src/layer/arm
+to the directory:
+ncnn/src/layer/riscv, performing the migration of vector instructions from ARM to RISC-V.
+Absolute paths must be used to read files and to write the migrated files.

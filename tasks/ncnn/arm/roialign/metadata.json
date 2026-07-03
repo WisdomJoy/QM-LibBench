@@ -1,0 +1,16 @@
+{
+        "name": "roialign",
+        "task_id": 35,
+        "repo": "ncnn",
+        "source_arch": "x86",
+        "target_arch": "arm",
+        "main_source_code_path": "ncnn/src/layer/x86/roialign_x86.cpp",
+        "target_file": "src/layer/arm/1.cpp",
+        "operator_description": "Extracts fixed-size features from regions of interest using aligned sampling.",
+        "correctness_test_commands": [
+            "./test_roialign"
+        ],
+        "performance_test_commands": [
+            "./perf_roialign"
+        ]
+}

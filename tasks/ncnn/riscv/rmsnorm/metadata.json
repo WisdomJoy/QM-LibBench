@@ -1,0 +1,16 @@
+{
+        "name": "rmsnorm",
+        "task_id": 69,
+        "repo": "ncnn",
+        "source_arch": "arm",
+        "target_arch": "riscv",
+        "main_source_code_path": "ncnn/src/layer/arm/rmsnorm_arm.cpp",
+        "target_file": "src/layer/riscv/1.cpp",
+        "operator_description": "Normalizes inputs by their root mean square value.",
+        "correctness_test_commands": [
+            "./test_rmsnorm"
+        ],
+        "performance_test_commands": [
+            "./perf_rmsnorm"
+        ]
+}

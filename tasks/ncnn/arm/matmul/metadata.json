@@ -1,0 +1,16 @@
+{
+        "name": "matmul",
+        "task_id": 32,
+        "repo": "ncnn",
+        "source_arch": "x86",
+        "target_arch": "arm",
+        "main_source_code_path": "ncnn/src/layer/x86/matmul_x86.cpp",
+        "target_file": "src/layer/arm/1.cpp",
+        "operator_description": "Performs matrix multiplication between input tensors.",
+        "correctness_test_commands": [
+            "./test_matmul"
+        ],
+        "performance_test_commands": [
+            "./perf_matmul"
+        ]
+}

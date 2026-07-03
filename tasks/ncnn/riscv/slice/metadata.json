@@ -1,0 +1,16 @@
+{
+        "name": "slice",
+        "task_id": 70,
+        "repo": "ncnn",
+        "source_arch": "arm",
+        "target_arch": "riscv",
+        "main_source_code_path": "ncnn/src/layer/arm/slice_arm.cpp",
+        "target_file": "src/layer/riscv/1.cpp",
+        "operator_description": "Splits or extracts tensor regions along a specified axis.",
+        "correctness_test_commands": [
+            "./test_slice"
+        ],
+        "performance_test_commands": [
+            "./perf_slice"
+        ]
+}

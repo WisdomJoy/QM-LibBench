@@ -1,0 +1,16 @@
+{
+        "name": "flatten",
+        "task_id": 60,
+        "repo": "ncnn",
+        "source_arch": "arm",
+        "target_arch": "riscv",
+        "main_source_code_path": "ncnn/src/layer/arm/flatten_arm.cpp",
+        "target_file": "src/layer/riscv/1.cpp",
+        "operator_description": "Reshapes a tensor into a flat one-dimensional feature vector.",
+        "correctness_test_commands": [
+            "./test_flatten"
+        ],
+        "performance_test_commands": [
+            "./perf_flatten"
+        ]
+}

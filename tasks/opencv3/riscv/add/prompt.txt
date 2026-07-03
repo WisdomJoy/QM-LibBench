@@ -1,0 +1,5 @@
+Migrate the add operator located in the directory:
+opencv/hal/carotene/src 
+to the directory:
+opencv/hal/riscv-rvv/src/core, performing the migration of vector instructions from ARM to RISC-V.
+Absolute paths must be used to read files and to write the migrated files.

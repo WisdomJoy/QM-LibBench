@@ -1,0 +1,21 @@
+{
+    "name": "Merged_Upsampling",
+    "task_id": 74,
+    "repo": "libjpeg",
+    "source_arch": "arm",
+    "target_arch": "riscv",
+    "main_source_code_path": [
+        "libjpeg/simd/arm/jdmrgext-neon.c",
+        "libjpeg/simd/arm/jdmerge-neon.c"
+    ],
+    "target_file": "simd/rvv/1.c",
+    "operator_description": "Combines chroma upsampling and YCbCr to RGB color space conversion into a single optimized operation during JPEG decompression. This module contains SIMD-optimized implementations for different subsampling ratios (h2v1 and h2v2), combining two pipeline stages to reduce memory bandwidth and improve cache efficiency. The merged operations process subsampled YCbCr data directly into full-resolution RGB pixels, avoiding intermediate buffer storage and providing significant performance improvements over separate upsampling and color conversion steps.",
+    "correctness_test_commands": [
+        "./test/gtest/test_h2v1_merged_upsample",
+        "./test/gtest/test_h2v2_merged_upsample"
+    ],
+    "performance_test_commands": [
+        "./test/gtest/perf_h2v1_merged_upsample",
+        "./test/gtest/perf_h2v2_merged_upsample"
+    ]
+}

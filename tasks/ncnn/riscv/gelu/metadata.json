@@ -1,0 +1,16 @@
+{
+        "name": "gelu",
+        "task_id": 61,
+        "repo": "ncnn",
+        "source_arch": "arm",
+        "target_arch": "riscv",
+        "main_source_code_path": "ncnn/src/layer/arm/gelu_arm.cpp",
+        "target_file": "src/layer/riscv/1.cpp",
+        "operator_description": "Applies the Gaussian Error Linear Unit activation function.",
+        "correctness_test_commands": [
+            "./test_gelu"
+        ],
+        "performance_test_commands": [
+            "./perf_gelu"
+        ]
+}

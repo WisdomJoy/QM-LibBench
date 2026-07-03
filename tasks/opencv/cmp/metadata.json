@@ -1,0 +1,18 @@
+{
+        "name": "cmp",
+        "task_id": 4,
+        "repo": "opencv",
+        "module": "core",
+        "source_arch": "arm",
+        "target_arch": "riscv",
+        "source_code_path": "opencv/hal/carotene/src/cmp.cpp",
+        "operator_description": "Perform element-wise comparison operations (equal, not equal, greater than, greater than or equal) on two arrays, outputting binary mask representing comparison results",
+        "correctness_test_commands": [
+            "./opencv_test_core --gtest_filter=Core_Cmp/ElemWiseTest.*",
+            "./opencv_test_core --gtest_filter=Core_CmpS/ElemWiseTest.*"
+        ],
+        "performance_test_commands": [
+            "./opencv_perf_core --gtest_filter=Size_MatType_CmpType_compare.*",
+            "./opencv_perf_core --gtest_filter=Size_MatType_CmpType_compareScalar.*"
+        ]
+}

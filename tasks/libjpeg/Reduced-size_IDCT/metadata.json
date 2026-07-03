@@ -1,0 +1,20 @@
+{
+    "name": "Reduced-size_IDCT",
+    "task_id": 77,
+    "repo": "libjpeg",
+    "source_arch": "arm64",
+    "target_arch": "riscv",
+    "main_source_code_path": [
+        "libjpeg/simd/arm/jidctred-neon.c"
+    ],
+    "target_file": "simd/rvv/1.c",
+    "operator_description": "Performs reduced-size inverse DCT to produce smaller output blocks (2x2 or 4x4 pixels) directly from 8x8 DCT coefficient blocks. This enables efficient image scaling during JPEG decompression by extracting only low-frequency coefficients and applying simplified two-pass IDCT operations. The 2x2 variant produces a quarter-size output suitable for 4:1 scaling, while the 4x4 variant produces half-size output suitable for 2:1 scaling. Both implementations skip processing of high-frequency coefficients that would be discarded anyway, significantly improving decompression performance for scaled output.",
+    "correctness_test_commands": [
+        "./test/gtest/test_idct_2x2",
+        "./test/gtest/test_idct_4x4"
+    ],
+    "performance_test_commands": [
+        "./test/gtest/perf_idct_2x2",
+        "./test/gtest/perf_idct_4x4"
+    ]
+}

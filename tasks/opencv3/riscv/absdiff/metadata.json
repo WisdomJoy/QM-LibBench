@@ -1,0 +1,18 @@
+{
+        "name": "absdiff",
+        "task_id": 0,
+        "repo": "opencv",
+        "module": "core",
+        "source_arch": "arm",
+        "target_arch": "riscv",
+        "source_code_path": "opencv/hal/carotene/src/absdiff.cpp",
+        "target_file": "hal/riscv-rvv/src/core/1.cpp",
+        "operator_description": "Calculate the absolute difference between corresponding elements of two input arrays",
+        "correctness_test_commands": [
+            "./opencv_test_core --gtest_filter=Core_AbsDiff/ElemWiseTest.*",
+            "./opencv_test_core --gtest_filter=Core_AbsDiffS/ElemWiseTest.*"
+        ],
+        "performance_test_commands": [
+            "./opencv_perf_core --gtest_filter=BinaryOpTest.absdiff*"
+        ]
+}

@@ -1,0 +1,16 @@
+{
+        "name": "pooling",
+        "task_id": 33,
+        "repo": "ncnn",
+        "source_arch": "x86",
+        "target_arch": "arm",
+        "main_source_code_path": "ncnn/src/layer/x86/pooling_x86.cpp",
+        "target_file": "src/layer/arm/1.cpp",
+        "operator_description": "Reduces spatial dimensions using max or average pooling.",
+        "correctness_test_commands": [
+            "./test_pooling"
+        ],
+        "performance_test_commands": [
+            "./perf_pooling"
+        ]
+}

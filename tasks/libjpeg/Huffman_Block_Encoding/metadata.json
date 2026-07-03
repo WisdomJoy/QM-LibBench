@@ -1,0 +1,18 @@
+{
+    "name": "Huffman_Block_Encoding",
+    "task_id": 75,
+    "repo": "libjpeg",
+    "source_arch": "arm64",
+    "target_arch": "riscv",
+    "main_source_code_path": [
+        "libjpeg/simd/arm/aarch64/jchuff-neon.c"
+    ],
+    "target_file": "simd/rvv/1.c",
+    "operator_description": "Encodes one block of quantized DCT coefficients using Huffman entropy coding for sequential JPEG compression. Processes an 8x8 DCT coefficient block by encoding the DC coefficient as a difference from the previous block's DC value, and encoding AC coefficients in zig-zag scan order with run-length encoding. Outputs compressed bitstream using DC and AC Huffman code tables.",
+    "correctness_test_commands": [
+        "./test/gtest/test_huff_encode_one_block"
+    ],
+    "performance_test_commands": [
+        "./test/gtest/perf_huff_encode_one_block"
+    ]
+}

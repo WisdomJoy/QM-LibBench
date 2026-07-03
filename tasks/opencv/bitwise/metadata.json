@@ -1,0 +1,22 @@
+ {
+        "name": "bitwise",
+        "task_id": 3,
+        "repo": "opencv",
+        "module": "core",
+        "source_arch": "arm",
+        "target_arch": "riscv",
+        "source_code_path": "opencv/hal/carotene/src/bitwise.cpp",
+        "operator_description": "Perform element-wise bitwise operations (AND, OR, XOR, NOT), performing bitwise logical operations on two input arrays or array and scalar",
+        "correctness_test_commands": [
+            "./opencv_test_core --gtest_filter=Core_And/ElemWiseTest.*",
+            "./opencv_test_core --gtest_filter=Core_Or/ElemWiseTest.*",
+            "./opencv_test_core --gtest_filter=Core_Xor/ElemWiseTest.*",
+            "./opencv_test_core --gtest_filter=Core_Not/ElemWiseTest.*"
+        ],
+        "performance_test_commands": [
+            "./opencv_perf_core --gtest_filter=Size_MatType_bitwise_and.*",
+            "./opencv_perf_core --gtest_filter=Size_MatType_bitwise_or.*",
+            "./opencv_perf_core --gtest_filter=Size_MatType_bitwise_xor.*",
+            "./opencv_perf_core --gtest_filter=Size_MatType_bitwise_not.*"
+        ]
+    }

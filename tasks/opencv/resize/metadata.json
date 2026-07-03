@@ -1,0 +1,28 @@
+{
+        "name": "resize",
+        "task_id": 18,
+        "repo": "opencv",
+        "module": "imgproc",
+        "source_arch": "arm",
+        "target_arch": "riscv",
+        "source_code_path": "opencv/hal/carotene/src/resize.cpp",
+        "operator_description": "Resize images using different interpolation methods, supporting nearest neighbor (fast), area (high quality downsampling), and bilinear (smooth scaling) interpolation",
+        "correctness_test_commands": [
+            "./opencv_test_imgproc --gtest_filter=Imgproc_resize_area.*",
+            "./opencv_test_imgproc --gtest_filter=Imgproc_Resize.*",
+            "./opencv_test_imgproc --gtest_filter=Imgproc_ResizeExact.*",
+            "./opencv_test_imgproc --gtest_filter=Resize.*",
+            "./opencv_test_imgproc --gtest_filter=Imgproc_Resize_Test.*",
+            "./opencv_test_imgproc --gtest_filter=Resize_Bitexact.*"
+        ],
+        "performance_test_commands": [
+            "./opencv_perf_imgproc --gtest_filter=MatInfo_Size_Size_resizeUpLinear.*",
+            "./opencv_perf_imgproc --gtest_filter=MatInfo_SizePair_resizeUpLinearNonExact.*",
+            "./opencv_perf_imgproc --gtest_filter=MatInfo_Size_Size_resizeDownLinear.*",
+            "./opencv_perf_imgproc --gtest_filter=MatInfo_SizePair_resizeDownLinearNonExact.*",
+            "./opencv_perf_imgproc --gtest_filter=MatInfo_Size_Scale_ResizeAreaFast.*",
+            "./opencv_perf_imgproc --gtest_filter=MatInfo_Size_Scale_Area_ResizeArea.*",
+            "./opencv_perf_imgproc --gtest_filter=MatInfo_Size_Scale_NN_ResizeNN.*",
+            "./opencv_perf_imgproc --gtest_filter=MatInfo_Size_Scale_NN_ResizeNNExact.*"
+        ]
+    }

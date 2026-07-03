@@ -1,0 +1,16 @@
+{
+        "name": "innerproduct",
+        "task_id": 28,
+        "repo": "ncnn",
+        "source_arch": "x86",
+        "target_arch": "arm",
+        "main_source_code_path": "ncnn/src/layer/x86/innerproduct_x86.cpp",
+        "target_file": "src/layer/arm/1.cpp",
+        "operator_description": "Computes a fully connected linear transformation of the input.",
+        "correctness_test_commands": [
+            "./test_innerproduct"
+        ],
+        "performance_test_commands": [
+            "./perf_innerproduct"
+        ]
+}

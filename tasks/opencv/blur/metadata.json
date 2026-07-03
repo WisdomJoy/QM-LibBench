@@ -1,0 +1,24 @@
+{
+        "name": "blur",
+        "task_id": 11,
+        "repo": "opencv",
+        "module": "imgproc",
+        "source_arch": "arm",
+        "target_arch": "riscv",
+        "source_code_path": "opencv/hal/carotene/src/blur.cpp",
+        "operator_description": "Apply 3x3 or 5x5 box filter to images for blurring, achieving smoothing effect by averaging pixel values in the kernel region",
+        "correctness_test_commands": [
+            "./opencv_test_imgproc --gtest_filter=Imgproc_Blur.*"
+        ],
+        "performance_test_commands": [
+            "./opencv_perf_imgproc --gtest_filter=Size_MatType_kSize_medianBlur.*",
+            "./opencv_perf_imgproc --gtest_filter=Size_MatType_BorderType3x3_blur3x3.*",
+            "./opencv_perf_imgproc --gtest_filter=Size_MatType_BorderType_blur16x16.*",
+            "./opencv_perf_imgproc --gtest_filter=Size_MatType_BorderType_blur5x5.*",
+            "./opencv_perf_imgproc --gtest_filter=Size_MatType_BorderType_ksize_box.*",
+            "./opencv_perf_imgproc --gtest_filter=Size_ksize_BorderType_box_CV8U_CV16U.*",
+            "./opencv_perf_imgproc --gtest_filter=Size_MatType_BorderType_ksize_box_inplace.*",
+            "./opencv_perf_imgproc --gtest_filter=Size_MatType_stackblur3x3.*",
+            "./opencv_perf_imgproc --gtest_filter=Size_MatType_stackblur101x101.*"
+        ]
+    }

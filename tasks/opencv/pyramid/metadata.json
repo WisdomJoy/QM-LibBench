@@ -1,0 +1,21 @@
+{
+        "name": "pyramid",
+        "task_id": 17,
+        "repo": "opencv",
+        "module": "imgproc",
+        "source_arch": "arm",
+        "target_arch": "riscv",
+        "source_code_path": "opencv/hal/carotene/src/pyramid.cpp",
+        "operator_description": "Perform image downsampling (PyrDown) or upsampling (PyrUp) operations using Gaussian pyramid filters, commonly used for multi-resolution image analysis",
+        "correctness_test_commands": [
+            "./opencv_test_imgproc --gtest_filter=Imgproc_Pyrdown.*",
+            "./opencv_test_imgproc --gtest_filter=Imgproc_PyrUp.*",
+            "./opencv_test_imgproc --gtest_filter=Imgproc_PyramidDown.*",
+            "./opencv_test_imgproc --gtest_filter=Imgproc_PyramidUp.*"
+        ],
+        "performance_test_commands": [
+            "./opencv_perf_imgproc --gtest_filter=Size_MatType_pyrDown.*",
+            "./opencv_perf_imgproc --gtest_filter=Size_MatType_pyrUp.*",
+            "./opencv_perf_imgproc --gtest_filter=Size_MatType_buildPyramid.*"
+        ]
+    }

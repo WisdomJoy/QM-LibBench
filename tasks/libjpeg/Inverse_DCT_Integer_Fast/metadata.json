@@ -1,0 +1,18 @@
+{
+    "name": "Inverse_DCT_Integer_Fast",
+    "task_id": 72,
+    "repo": "libjpeg",
+    "source_arch": "arm",
+    "target_arch": "riscv",
+    "main_source_code_path": [
+        "libjpeg/simd/arm/jidctfst-neon.c"
+    ],
+    "target_file": "simd/rvv/1.c",
+    "operator_description": "Performs fast inverse Discrete Cosine Transform (IDCT) with dequantization on 8x8 DCT coefficient blocks using integer arithmetic for JPEG decompression. Uses reduced accuracy but faster execution, suitable for real-time applications. Transforms frequency domain coefficients back to spatial domain pixel data, restoring the original image after quantization and entropy decoding.",
+    "correctness_test_commands": [
+        "./test/gtest/test_idct_ifast"
+    ],
+    "performance_test_commands": [
+        "./test/gtest/perf_idct_ifast"
+    ]
+}

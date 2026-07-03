@@ -1,0 +1,22 @@
+{
+        "name": "colorconvert",
+        "task_id": 12,
+        "repo": "opencv",
+        "module": "imgproc",
+        "source_arch": "arm",
+        "target_arch": "riscv",
+        "source_code_path": "opencv/hal/carotene/src/colorconvert.cpp",
+        "operator_description": "Perform conversions between different color spaces, supporting various color space conversion operations such as RGB to grayscale, RGB to YUV, YUV to RGB",
+        "correctness_test_commands": [
+            "./opencv_test_imgproc --gtest_filter=Imgproc_Color*.*",
+            "./opencv_test_imgproc --gtest_filter=Imgproc_cvtColor_BE.*",
+            "./opencv_test_imgproc --gtest_filter=cvt420/Imgproc_ColorYUV.*",
+            "./opencv_test_imgproc --gtest_filter=cvt422/Imgproc_ColorYUV.*"
+        ],
+        "performance_test_commands": [
+            "./opencv_perf_imgproc --gtest_filter=Size_CvtMode_cvtColor8u.*",
+            "./opencv_perf_imgproc --gtest_filter=Size_CvtMode2_cvtColorYUV420.*",
+            "./opencv_perf_imgproc --gtest_filter=Size_CvtMode3_cvtColorRGB2YUV420p.*",
+            "./opencv_perf_imgproc --gtest_filter=Size_CvtMode_Bayer_cvtColorBayer8u.*"
+        ]
+    }

@@ -1,0 +1,5 @@
+Migrate the roialign operator located in the directory:
+ncnn/src/layer/x86
+to the directory:
+ncnn/src/layer/arm, performing the migration of vector instructions from X86 to ARM.
+Absolute paths must be used to read files and to write the migrated files.

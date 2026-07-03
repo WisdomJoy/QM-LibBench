@@ -1,0 +1,20 @@
+{
+    "name": "Progressive_Huffman_AC_Prepare",
+    "task_id": 76,
+    "repo": "libjpeg",
+    "source_arch": "arm",
+    "target_arch": "riscv",
+    "main_source_code_path": [
+        "libjpeg/simd/arm/jcphuff-neon.c"
+    ],
+    "target_file": "simd/rvv/1.c",
+    "operator_description": "Prepares DCT coefficients for progressive JPEG Huffman encoding by processing AC coefficients for first scan (spectral selection) and refinement scan (successive approximation). Includes two variants: AC_first_prepare applies point transform and computes absolute values and zerobits bitmap for the first AC scan; AC_refine_prepare computes absolute values, zerobits, signbits, and EOB position for refinement scans. These preparation steps enable efficient progressive JPEG encoding.",
+    "correctness_test_commands": [
+        "./test/gtest/test_encode_mcu_AC_first_prepare",
+        "./test/gtest/test_encode_mcu_AC_refine_prepare"
+    ],
+    "performance_test_commands": [
+        "./test/gtest/perf_encode_mcu_AC_first_prepare",
+        "./test/gtest/perf_encode_mcu_AC_refine_prepare"
+    ]
+}

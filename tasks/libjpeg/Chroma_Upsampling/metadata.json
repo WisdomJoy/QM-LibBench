@@ -1,0 +1,24 @@
+{
+    "name": "Chroma_Upsampling",
+    "task_id": 73,
+    "repo": "libjpeg",
+    "source_arch": "arm",
+    "target_arch": "riscv",
+    "main_source_code_path": [
+        "libjpeg/simd/arm/jdsample-neon.c"
+    ],
+    "target_file": "simd/rvv/1.c",
+    "operator_description": "Upsamples chrominance components during JPEG decompression to restore full resolution from subsampled data. This module contains SIMD-optimized implementations for different upsampling methods and ratios: (1) Simple upsampling (h2v1, h2v2) by duplicating samples horizontally and/or vertically with 2:1 ratio; (2) Fancy upsampling (h1v2_fancy, h2v1_fancy, h2v2_fancy) using smooth interpolation with 3:1 blending ratio for better visual quality. The upsampling process reconstructs the full-resolution chroma components to match the luma component resolution, preparing the image for color space conversion.",
+    "correctness_test_commands": [
+        "./test/gtest/test_h2v1_upsample",
+        "./test/gtest/test_h2v2_upsample",
+        "./test/gtest/test_h2v1_fancy_upsample",
+        "./test/gtest/test_h2v2_fancy_upsample"
+    ],
+    "performance_test_commands": [
+        "./test/gtest/perf_h2v1_upsample",
+        "./test/gtest/perf_h2v2_upsample",
+        "./test/gtest/perf_h2v1_fancy_upsample",
+        "./test/gtest/perf_h2v2_fancy_upsample"
+    ]
+}

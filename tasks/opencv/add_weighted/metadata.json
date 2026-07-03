@@ -1,0 +1,17 @@
+ {
+        "name": "add_weighted",
+        "task_id": 2,
+        "repo": "opencv",
+        "module": "core",
+        "source_arch": "arm",
+        "target_arch": "riscv",
+        "source_code_path": "opencv/hal/carotene/src/add_weighted.cpp",
+        "operator_description": "Calculate weighted sum of two input arrays: dst = alpha*src1 + beta*src2 + gamma, used for image fusion and brightness adjustment",
+        "correctness_test_commands": [
+            "./opencv_test_core --gtest_filter=Core_ScaleAdd/ElemWiseTest.*",
+            "./opencv_test_core --gtest_filter=Core_AddWeighted/ElemWiseTest.*"
+        ],
+        "performance_test_commands": [
+            "./opencv_perf_core --gtest_filter=Size_MatType_addWeighted.*"
+        ]
+    }

@@ -1,0 +1,17 @@
+{
+        "name": "convolution",
+        "task_id": 13,
+        "repo": "opencv",
+        "module": "imgproc",
+        "source_arch": "arm",
+        "target_arch": "riscv",
+        "target_file": "hal/riscv-rvv/src/core/1.cpp",
+        "source_code_path": "opencv/hal/carotene/src/convolution.cpp",
+        "operator_description": "Apply 3x3 custom convolution kernel to images for general convolution operations, supporting constant and replicate border modes",
+        "correctness_test_commands": [
+            "./opencv_test_imgproc --gtest_filter=Imgproc_Filter2D.*"
+        ],
+        "performance_test_commands": [
+            "./opencv_perf_imgproc --gtest_filter=TestFilter2d_Filter2d.*"
+        ]
+    }

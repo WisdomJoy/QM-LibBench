@@ -1,0 +1,21 @@
+{
+        "name": "sobel",
+        "task_id": 20,
+        "repo": "opencv",
+        "module": "imgproc",
+        "source_arch": "arm",
+        "target_arch": "riscv",
+        "source_code_path": "opencv/hal/carotene/src/sobel.cpp",
+        "operator_description": "Calculate the first-order spatial derivative of an image in horizontal or vertical direction using a 3x3 Sobel kernel, used for edge detection and highlighting edge features",
+        "correctness_test_commands": [
+            "./opencv_test_imgproc --gtest_filter=Imgproc_Sobel*"
+        ],
+        "performance_test_commands": [
+            "./opencv_perf_imgproc --gtest_filter=Size_MatType_dx_dy_Border3x3_sobelFilter.*",
+            "./opencv_perf_imgproc --gtest_filter=Size_MatType_dx_dy_Border3x3ROI_sobelFilter.*",
+            "./opencv_perf_imgproc --gtest_filter=Size_MatType_dx_dy_Border5x5_sobelFilter.*",
+            "./opencv_perf_imgproc --gtest_filter=Size_MatType_dx_dy_Border5x5ROI_sobelFilter.*",
+            "./opencv_perf_imgproc --gtest_filter=Size_MatType_dx_dy_Border3x3_scharrViaSobelFilter.*",
+            "./opencv_perf_imgproc --gtest_filter=Size_MatType_dx_dy_Border3x3ROI_scharrViaSobelFilter.*"
+        ]
+    }
